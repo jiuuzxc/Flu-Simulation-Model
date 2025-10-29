@@ -1,0 +1,85 @@
+@font-face {
+    font-family: Roboto-medium;
+    src: url(fonts/Roboto-Medium.ttf);
+}
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    color: #1958A2;
+    scroll-behavior: smooth;
+}
+body{
+    display: flex;
+    background-color: #F6F4FC;
+    flex-direction: column;
+    height: 100%;
+}
+
+#bg-image{
+    position: fixed;
+    background-image:url(https://img.freepik.com/free-photo/white-virus-bacteria-cells-3d-render-background_44769-1748.jpg?size=626&ext=jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    opacity: 0.3;
+    z-index: 0;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Roboto-medium;
+    height: 100vh;
+}
+#content-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    width: 70%;
+    z-index: 1;
+}
+#get-started-button{
+    background-color: #1958A2;
+    width: 450px;
+    height: 90px;
+    font-size: 2rem;
+    border-style: none;
+    border-radius: 30px;
+    transition: background-color 0.5s ,color 0.5s;
+    cursor: pointer;
+
+}
+#get-started-button a{
+    color: #F6F4FC;
+    text-decoration: none;
+}
+#get-started-button:hover{
+    background-color: #8c97e7;
+}
+#get-started-button a:hover{
+    color: #1958A2;
+}
+#flu-simulation-text{
+    font-size: 3.5rem;
+}
+@media screen and (max-width:550px){
+    #content-container{
+        width: 100%;
+        gap: 0px;
+    }
+    #get-started-button{
+        width: 200px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+    #flu-simulation-text{
+        margin-top: 200px;
+        font-size: 2rem;
+    }
+}

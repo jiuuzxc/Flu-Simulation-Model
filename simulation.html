@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Influenza Prediction & Simulation</title>
+    <link rel="stylesheet" href="css/header.css">                                                                                      
+    <link rel="stylesheet" href="css/simulation.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+</head>
+<body id="page-body">
+  <header>
+    <div id="logo"><a href="index.html"><img src="assets/Flu-Logo-removebg-preview.png" alt="omsim-logo"></a></div>
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="simulation.html">SIMULATION</a></li>
+            <li><a href="learn.html">LEARN</a></li>
+            <li><a href="#references">REFERENCES</a></li>
+        </ul>
+    </nav>
+</header>
+<div id="bg-image"></div>
+<main>
+  <section id="main-content">
+    <section class="sub-content model-form">
+      <section id="forms">
+        <div class="custom-row">
+          <div class="form-section">
+            <form class="custom-form" role="complementary" id="fluPredictionForm">
+              <div class="form-group">
+                <label for="feature1">Temperature(Celcius):</label>
+                <input id="feature1" type="number" class="input-control" value="37.3" min="30" max="42" step="0.1">
+              </div>
+              <div class="form-group">
+                <label for="feature2">Enter your height(cm):</label>
+                <input id="feature2" type="number" class="input-control" value="160" min="1" max="400" step="0.5">
+              </div>
+              <div class="form-group">
+                <label for="feature3">Enter your weight(kg):</label>
+                <input id="feature3" type="number" class="input-control" value="60" min="1" max="400" step="0.5">
+              </div>
+              <div class="form-group">
+                <label for="feature4">Enter the days of illness:</label>
+                <input id="feature4" type="number" class="input-control" value="1" min="1" max="14" step="1">
+              </div>
+              <div class="form-group">
+                <label for="feature5">Enter the week:</label>
+                <input id="feature5" type="number" class="input-control" value="1" min="1" max="53" step="1">
+              </div>
+              <div class="form-group">
+                <label for="feature6">Enter the season (1 for spring, 2 for summer, 3 for autumn, 4 for winter):</label>
+                <input id="feature6" type="number" class="input-control" value="1" min="1" max="4" step="1">
+              </div>
+              <div class="form-group">
+                <label for="feature11">Did you receive an influenza vaccine this year?</label>
+                <select id="feature11" class="input-control">
+                  <option value="No" selected>No</option>
+                  <option value="Yes">Yes</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="feature12">Did you have cough before taking this test??</label>
+                <select id="feature12" class="input-control">
+                  <option value="No" selected>No</option>
+                  <option value="Yes">Yes</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="feature13">Did you cough up phlegm?</label>
+                <select id="feature13" class="input-control">
+                  <option value="No" selected>No</option>
+                  <option value="Yes">Yes</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="feature14">Did you have sore throat before taking this test?</label>
+                <select id="feature14" class="input-control">
+                  <option value="No" selected>No</option>
+                  <option value="Yes">Yes</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="feature15">Did you have a stuffy nose before taking this test?</label>
+                <select id="feature15" class="input-control">
+                  <option value="No" selected>No</option>
+                  <option value="Yes">Yes</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="feature16">Did you have sinus pain before taking this test?</label>
+                <select id="feature16" class="input-control">
+                  <option value="No" selected>No</option>
+                  <option value="Yes">Yes</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="feature17">Within the past 5 days, have you been exposed to a person with confirmed influenza?</label>
+                <select id="feature17" class="input-control">
+                  <option value="No" selected>No</option>
+                  <option value="Yes">Yes</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="feature18">Have you traveled in the past 30 days?</label>
+                <select id="feature18" class="input-control">
+                  <option value="No" selected>No</option>
+                  <option value="Yes">Yes</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="feature19">Have you taken any influenza antivirals (i.e anitbiotics, antifungal and antiparasitic drugs) in the past 30 days?</label>
+                <select id="feature19" class="input-control">
+                  <option value="No" selected>No</option>
+                  <option value="Yes">Yes</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="feature20">Do you have Chronic Lung Disease?</label>
+                <select id="feature20" class="input-control">
+                  <option value="No" selected>No</option>
+                  <option value="Yes">Yes</option>
+                </select>
+              </div>
+              <button type="submit" class="submit-btn">Predict Flu Probability</button>
+            </form>
+          </div>
+      </section>
+    </section>
+    <section class="sub-content results">
+        <h3>Predicted probability (%):</h3>
+        <h4 style="color:#FF4500;font-size:40px">
+            <div id="prob" class="result-output"></div>
+        </h4>
+      <div id="model">
+          <svg id="human-body" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" width="400" height="500">
+                <g>
+                    <!-- Head -->
+                    <circle id="head" cx="100" cy="50" r="40" class="healthy"></circle>
+                    <!-- Lungs -->
+                    <rect id="lungs" x="75" y="100" width="50" height="100" class="healthy"></rect>
+                    <!-- Stomach -->
+                    <rect id="stomach" x="75" y="200" width="50" height="80" class="healthy"></rect>
+                    <!-- Throat -->
+                    <rect id="throat" x="90" y="80" width="20" height="20" class="healthy"></rect>
+                    <!-- Nose -->
+                    <polygon id="nose" points="95,60 105,60 100,70" class="healthy"></polygon>
+                    <!-- Arms (Static Healthy) -->
+                    <rect id="left-arm" x="25" y="100" width="30" height="150" class="healthy"></rect>
+                    <rect id="right-arm" x="145" y="100" width="30" height="150" class="healthy"></rect>
+                    <!-- Legs (Static Healthy) -->
+                    <rect id="left-leg" x="75" y="280" width="30" height="100" class="healthy"></rect>
+                    <rect id="right-leg" x="95" y="280" width="30" height="100" class="healthy"></rect>
+                </g>
+            </svg>
+      </div>
+      <div class="tab-container">
+        <div class="tab">
+            <button class="tablinks green active" onclick="openTab(event, 'Green Tab')">0% to 39% Predicted probability</button>
+            <button class="tablinks yellow" onclick="openTab(event, 'Yellow Tab')">40% to 79% Predicted probability</button>
+            <button class="tablinks red" onclick="openTab(event, 'Red Tab')">80%+ Predicted probability</button>
+        </div>
+    
+        <div id="Green Tab" class="tabcontent">
+            <h4><strong>At this stage, you still feel fine but in couple of day you will experience the symptoms.</h4></strong><br>
+        </div>
+    
+        <div id="Yellow Tab" class="tabcontent">
+            <h3><strong>Symptoms of Influenza</strong></h3>
+            <h4>This stage is where you experience symptoms of influenza. Symptoms such as:</h4>
+              <ul>
+                <li>Sudden or excessive fatigue</li>
+                <li>Body aches and chills</li>
+                <li>Cough</li>
+                <li>Sore throat</li>
+                <li>Fever</li>
+              </ul>
+            <h4>This stage can be treated by just resting, drinking plenty of fluids, and taking over-the-counter medicine.</h4>
+        </div>
+    
+        <div id="Red Tab" class="tabcontent">
+            <h3>!!!Danger Zone!!!</h3>
+            <h4>If influenza gets left untreated then it can lead to complications like pneumonia and bronchitis.<br></h4>
+            <h4>People who have medical complications has a higher risk of getting a serious diesease like:</h4>
+            <ul>
+              <li>Cardiac disease</li>
+              <li>Chronic respiratory conditions</li>
+              <li>immunocompromising conditions</li>
+              <li>haematological disorders</li>
+              <li>chronic metabolic disorder</li>
+              <li>chronic kidney disease</li>
+              <li>chronic neurological condition</li>
+            </ul>
+        </div>
+    </div>
+    </section>
+  </section>
+</main>
+<footer>
+        <h2 id="references">References</h2>
+        <ul>
+          <li><a href="https://www.mayoclinic.org/diseases-conditions/flu/symptoms-causes/syc-20351719">www.mayoclinic.org</a></li>
+          <li><a href="https://www.who.int/news-room/fact-sheets/detail/influenza-(seasonal)">www.who.int</a></li>
+          <li><a href="https://www.pfizer.com/disease-and-conditions/influenza">www.pfizer.com</a></li>
+          <li><a href="https://www.health.com/condition/flu/what-is-influenza-b">www.health.com</a></li>
+          <li><a href="https://www.webmd.com/cold-and-flu/advanced-reading-types-of-flu-viruses">www.webmd.com</a></li>
+          <li><a href="https://www.cdc.gov/flu/about/season.html?CDC_AAref_Val=https://www.cdc.gov/flu/about/season/index.html">www.cdc.gov</a></li>
+          <li><a href="https://www.cdc.gov/flu/prevention/actions-prevent-flu.html">www.cdc.gov</a></li>
+          <li><a href="https://www.mayoclinic.org/diseases-conditions/flu/in-depth/flu-shots/art-20048000">www.mayoclinic.org</a></li>
+          <li><a href="https://www.healthline.com/health/cold-flu/early-flu-symptoms#cough">www.healthline.com/</a></li>
+        </ul>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+@font-face {
+    font-family: Roboto-medium;
+    src: url(fonts/Roboto-Medium.ttf);
+}
+@font-face {
+    font-family: Open-sans;
+    src: url(fonts/OpenSans-Medium.ttf);
+}
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    scroll-behavior: smooth;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+#bg-image{
+    position: fixed;
+    background-image:url(https://img.freepik.com/free-photo/white-virus-bacteria-cells-3d-render-background_44769-1748.jpg?size=626&ext=jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    opacity: 0.3;
+    z-index: 0;
+}
+main{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+h1, h2 ,h3{
+    font-family: Roboto-medium;
+    color: #1958A2;
+}
+h1{ 
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+h2{
+    font-size: 1.8rem;
+}
+h3{
+    font-size: 1.4rem;
+}
+strong, b, span{
+    color: #1958A2;
+}
+#content-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 180px;
+    text-align: justify;
+    z-index: 1;
+}
+.information-container{
+    height: 100%;
+    padding: 20px 30px;
+}
+.information-container ul{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-decoration: none;
+    list-style: none;
+}
+#symptom-list{
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+    gap: 20px;
+}
+.information-container a{
+    text-decoration: none;
+}
+.main-content{
+    height: 100%;
+    width: 800px;
+}
+article{
+    text-align: left;
+    font-family: 'Open-sans';
+    margin-bottom: 50px;
+}
+article p li{
+    color: black;
+}
+article img{
+    min-height: none;
+    max-height: 400px;
+    width: 100%;
+    border: 1px solid;
+    Object-fit: cover;
+    overflow:hidden;
+}
+figcaption{
+    font-size: 0.75rem;
+    margin-bottom: 30px;
+}
+@media screen and (min-width:400px){
+    #content-wrapper{
+        width: 100%;
+    }
+}
+@media screen and (min-width:700px){
+    #content-wrapper{
+        width: 65%;
+    }
+}
+

@@ -1,0 +1,88 @@
+@font-face {
+    font-family: Roboto-medium;
+    src: url(fonts/Roboto-Medium.ttf);
+}
+@font-face {
+    font-family: Open-sans;
+    src: url(fonts/OpenSans-Medium.ttf);
+}
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+#bg-image{
+    position: fixed;
+    background-image:url(https://img.freepik.com/free-photo/white-virus-bacteria-cells-3d-render-background_44769-1748.jpg?size=626&ext=jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    opacity: 0.3;
+    z-index: 0;
+}
+body{
+    height: 100vh;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+}
+h1{
+    text-align: center;
+    font-family: Roboto-medium;
+    margin-top: 200px;
+    color: #1958A2;
+    margin-bottom: 100px;
+    font-size: 2.4rem;
+    z-index: 1
+}
+h2{
+    font-family: 'Roboto-medium';
+    color: #1958A2;
+    font-size: 1.8;
+}
+#content{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 60px;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 70px;
+    z-index: 2
+}
+.content-sub-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    width: 400px;
+    font-size: 1.2rem;
+}
+
+
+
+.content-sub-section div{
+    height: 300px;
+    width: 400px;
+    border: 1px solid;
+    margin-bottom: 20px;
+}
+.simulation p,.team p, li{
+    font-family: 'Open-sans';
+    text-align: left;
+    list-style: none;
+}
+.img{
+    Object-fit: cover;
+    overflow:hidden;
+}
