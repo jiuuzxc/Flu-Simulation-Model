@@ -46,7 +46,7 @@ Enter "http://localhost:8000/" in your browser.
 
 <h2>Team Members</h2>
 
-- **Julian Mathew Guintu **: Machine Learning Engineer 
-- **Gabriel Pagcu **: Backend Developer 
-- **Guiliani Louis Pobre **: Full Stack Developer 
+- **Julian Mathew Guintu**: Machine Learning Engineer 
+- **Gabriel Pagcu**: Backend Developer 
+- **Guiliani Louis Pobre**: Full Stack Developer 
 - **Dean Louis Santos**: Frontend Developer 
