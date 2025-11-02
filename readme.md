@@ -8,8 +8,26 @@
 <p>Modeling and Simulation Final Project for the 1st Semester of Junior College 2024 - 2025.</p>
 
 <h2>Tech Stack</h2>
+<h3>Frontend</h3>
+<img width="80" alt="image" src="https://github.com/user-attachments/assets/7d9d38f6-b14a-4bdd-aafc-34a0eefde319"/>
+<img width="80" alt="image" src="https://github.com/user-attachments/assets/4a6be0d0-5ee8-4dc9-beac-c9380817585a" />
+<img width="80" alt="image" src="https://github.com/user-attachments/assets/be0ae8bd-6c75-4553-885c-987358f2bd4d" />
 
-![HTML](http://www.w3.org/2000/svg)
+-  HTML, CSS, and Javascript is used for the Frontend UI and visualization the Flu Simulation Model.
+  
+<h3>Backend</h3>
+<img width="80" alt="image" src="https://github.com/user-attachments/assets/04c25d3f-3532-420d-a113-7a5b8880f906" />
+<img width="80" alt="image" src="https://github.com/user-attachments/assets/6d9aa5d4-4a1d-4b43-963c-e53c072101dd" />
+
+-  Python is used to create the XG Boost model and backend of the program
+-  Flask API is used for the backend and to communicate to the front-end through RESTful API Endpoints.
+<h3>Algorithm used</h3>
+
+-  XG Boost
+
+<h3>Dataset used</h3>
+
+-  <a href="https://github.com/wujinja-cgu/FLu_ML_prediction?fbclid=IwY2xjawN0MtVleHRuA2FlbQIxMQBicmlkETFLS2NxY1hLY3ZHYkMxV0t6AR7bGXDVLdUXEizljgNjRIILoL-IG7D2nDSirrAgKR6rwy6PpEld9RPytwTqQQ_aem_mIP8B1o7iJkIgxjJ2zlzcg">FLu_ML_prediction</a>
 
 <h2>🛠️ Installation Steps:</h2>
 
