@@ -7,6 +7,8 @@
 <p>This code implements an interactive health educational tool structured around five key modules. The program's flow is designed to first assess a user, then educate them through a personalized simulation, and finally, use their data to improve its own predictive accuracy.</p>
 <p>Modeling and Simulation Final Project for the 1st Semester of Junior College 2024 - 2025.</p>
 
+<h2>Tech Stack</h2>
+
 <h2>🛠️ Installation Steps:</h2>
 
 
