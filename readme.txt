@@ -4,7 +4,7 @@ numpy
 pandas
 scikit-learn
 flask
-flask-cors
+flask-cors 
 xgboost
 
 STEPS TO RUN THE PROGRAM:
